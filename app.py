@@ -2,6 +2,7 @@ import cv2
 import pytesseract
 import streamlit as st
 from PIL import Image
+pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 st.title("Number Plate detection")
 img = st.sidebar.file_uploader("Please upload a number plate")
 if img is not None:
